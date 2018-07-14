@@ -1,0 +1,28 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <title></title>
+</head>
+<link rel="stylesheet" href="#">
+<body>
+
+<div class="gallery">
+    {% for image in image_obj %}
+        <a target="_blank" href="{{ image }}">
+            <img src="{{ image }}" width="300" height="250" style="margin: 10px;">
+        </a>
+    {% endfor %}
+</div>
+<div class="files" style="margin-top:10px;">
+    {% for file in other_obj %}
+        <div style="margin-top:10px;">
+            <a href="{{ file }}">
+                {{ file }}
+            </a>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>
+
